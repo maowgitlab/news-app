@@ -23,7 +23,6 @@
     new DataTable('#user-table')
     tinymce.init({
         selector: 'textarea#konten',
-        plugins: 'link',
     });
 
     function deletePost(id) {
