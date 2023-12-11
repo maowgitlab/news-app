@@ -23,7 +23,12 @@
     new DataTable('#user-table')
     tinymce.init({
         selector: 'textarea#konten',
+        menubar: false,
+        plugins: 'lists link',
+        contextmenu: false,
+        toolbar: 'undo redo | blocks | bold italic | bullist numlist link | alignleft aligncenter alignright alignjustify | indent outdent'
     });
+
 
     function deletePost(id) {
         Swal.fire({
