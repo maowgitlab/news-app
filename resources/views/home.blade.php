@@ -40,5 +40,22 @@
                 <i class="fa-solid fa-fw fa-sm fa-search"></i> Yah.. Berita tidak tersedia.
             </div>
         @endif
+        <div class="card mb-3 d-block d-lg-none">
+            <div class="card-header">Kategori</div>
+            <div class="card-body">
+                <div class="row">
+                    @if ($categories->count() > 0)
+                        @foreach ($categories as $category)
+                            <div class="col">
+                                <a href="{{ route('welcome', ['kategori' => $category->slug]) }}"
+                                    class="text-decoration-none badge text-bg-dark">{{ $category->nama_kategori }}</a>
+                            </div>
+                        @endforeach
+                    @else
+                        <p class="text-center mb-0">Kategori Masih Kosong</p>
+                    @endif
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
