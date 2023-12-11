@@ -87,7 +87,7 @@
                 </div>
             </div>
             <!-- Categories widget-->
-            <div class="card mb-3 d-none d-lg-block">
+            <div class="card mb-3 {{ Request::is('/') ? 'd-none d-lg-block' : '' }}">
                 <div class="card-header">Kategori</div>
                 <div class="card-body">
                     <div class="row">
