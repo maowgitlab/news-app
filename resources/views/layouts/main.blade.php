@@ -94,7 +94,7 @@
                         @if ($categories->count() > 0)
                             @foreach ($categories as $category)
                                 <div class="col">
-                                    <a href="{{ route('welcome', ['kategori' => $category->nama_kategori]) }}"
+                                    <a href="{{ route('welcome', ['kategori' => $category->slug]) }}"
                                         class="text-decoration-none badge text-bg-dark">{{ $category->nama_kategori }}</a>
                                 </div>
                             @endforeach

@@ -23,7 +23,7 @@ class Post extends Model
         })
         ->when($category, function($query) use ($category) {
             $query->whereHas('categories', function($categoryQuery) use ($category) {
-                $categoryQuery->where('nama_kategori', $category);
+                $categoryQuery->where('slug', $category);
             });
             // $query->join('post_categories', 'posts.id', '=', 'post_categories.post_id')
             // ->join('categories', 'post_categories.category_id', '=', 'categories.id')
