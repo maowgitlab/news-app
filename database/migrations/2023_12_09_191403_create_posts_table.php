@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('diupload_oleh');
+            $table->unsignedBigInteger('diupload_oleh')->nullable();
             $table->string('judul');
             $table->string('slug');
             $table->text('konten');
