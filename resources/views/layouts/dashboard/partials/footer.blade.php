@@ -26,7 +26,17 @@
         menubar: false,
         plugins: 'lists link',
         contextmenu: false,
-        toolbar: 'undo redo | blocks | bold italic | bullist numlist link | alignleft aligncenter alignright alignjustify | indent outdent'
+        toolbar: 'undo redo | domain sumber | blocks | bold italic | bullist numlist link | alignleft aligncenter alignright alignjustify | indent outdent',
+        setup: (editor) => {
+            editor.ui.registry.addButton('domain', {
+              text: 'DOMAIN',
+              onAction: (_) => editor.insertContent(`<strong>READONLY-NEWS.MY.ID -</strong>&nbsp;`)
+            });
+            editor.ui.registry.addButton('sumber', {
+              text: 'SUMBER',
+              onAction: (_) => editor.insertContent(`<strong>Sumber:</strong>&nbsp;`)
+            });
+        },
     });
 
 
